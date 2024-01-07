@@ -1,0 +1,26 @@
+cabal-version:      3.8
+name:               test-inline-c
+version:            0.1.0.0
+license:            MIT
+author:             Mathias Sven
+maintainer:         mathiassven2@hotmail.com
+build-type:         Simple
+extra-source-files: src/*.hpp
+
+common warnings
+    ghc-options: -Wall
+
+executable test-inline-c
+    import:           warnings
+    main-is:          Main.hs
+
+    other-modules:    
+    
+    build-depends:    base >= 4.18 && <4.19
+                    , inline-c
+                    , inline-c-cpp
+
+    hs-source-dirs:   src
+    default-language: GHC2021
+    ghc-options: -threaded -optcxx-std=c++20
+
