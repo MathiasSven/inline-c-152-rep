@@ -14,11 +14,19 @@ executable test-inline-c
     import:           warnings
     main-is:          Main.hs
 
-    other-modules:    
+    other-modules:    Large
+
+                    -- for C.include hotfix
+                    , Language.C.Inline.Cpp
     
     build-depends:    base >= 4.18 && <4.19
                     , inline-c
                     , inline-c-cpp
+
+                    -- for C.include hotfix
+                    , template-haskell
+                    , filepath
+                    , directory
 
     hs-source-dirs:   src
     default-language: GHC2021

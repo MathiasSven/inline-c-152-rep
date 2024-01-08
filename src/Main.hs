@@ -4,7 +4,8 @@
 
 module Main where
 
-import qualified Language.C.Inline.Cpp    as C
+import qualified Language.C.Inline.Cpp as C
+import           Large
 
 C.context $ C.cppCtx
 
